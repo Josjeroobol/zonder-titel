@@ -14,7 +14,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.compassHeading() < 135 && input.compassHeading() > 225) {
+    if (input.compassHeading() < 135 && 225 > input.compassHeading()) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -25,7 +25,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.compassHeading() < 225 && input.compassHeading() > 315) {
+    if (input.compassHeading() < 225 && 315 > input.compassHeading()) {
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -36,7 +36,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.compassHeading() < 45 && input.compassHeading() > 315) {
+    if (input.compassHeading() < 45 && 315 > input.compassHeading()) {
         basic.showLeds(`
             . . # . .
             . # # # .
