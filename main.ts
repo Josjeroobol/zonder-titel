@@ -1,9 +1,9 @@
+let kompasrichting = 0
 basic.forever(function () {
-    let kompasrichting = 0
-    basic.showString("" + (kompasrichting))
+    kompasrichting = input.compassHeading()
 })
 basic.forever(function () {
-    if (input.compassHeading() > 45 && input.compassHeading() < 135) {
+    if (kompasrichting > 45 && kompasrichting < 135) {
         basic.showLeds(`
             . . # . .
             . # . . .
@@ -12,7 +12,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (input.compassHeading() > 135 && 225 < input.compassHeading()) {
+    if (kompasrichting > 135 && kompasrichting < 225) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -21,7 +21,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (input.compassHeading() > 225 && 315 < input.compassHeading()) {
+    if (kompasrichting > 225 && kompasrichting < 315) {
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -30,7 +30,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (input.compassHeading() > 315 && 360 < input.compassHeading()) {
+    if (kompasrichting > 315 && kompasrichting < 360) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -39,7 +39,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (input.compassHeading() > 0 && 45 < input.compassHeading()) {
+    if (kompasrichting > 0 && kompasrichting < 45) {
         basic.showLeds(`
             . . # . .
             . # # # .
